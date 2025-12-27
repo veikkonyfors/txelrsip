@@ -1,0 +1,2 @@
+#define txelrsip_VERSION_MAJOR @txelrsip_VERSION_MAJOR@
+#define txelrsip_VERSION_MINOR @txelrsip_VERSION_MINOR@
