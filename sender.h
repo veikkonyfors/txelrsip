@@ -8,6 +8,6 @@
 #ifndef SENDER_H_
 #define SENDER_H_
 
-int sender(void);
+int sender(char *ip, int port);
 
 #endif /* SENDER_H_ */

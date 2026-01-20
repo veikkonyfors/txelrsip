@@ -15,10 +15,8 @@
 #include "crsf.h"
 
 #define BUF_SIZE 64
-#define PORT 22777
-#define DEST_IP "127.0.0.1"
 
-int sender() {
+int sender(char *ip, int port) {
     int send_sock;
     struct sockaddr_in serv_addr;
 
@@ -30,8 +28,8 @@ int sender() {
 
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = inet_addr(DEST_IP);
-    serv_addr.sin_port = htons(PORT);
+    serv_addr.sin_addr.s_addr = inet_addr(ip);
+    serv_addr.sin_port = htons(port);
 
     crsf_frame_union_t tx_frame;
     crsf_channels_t default_channels = CRSF_CHANNELS_DEFAULT;
