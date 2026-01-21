@@ -35,7 +35,7 @@ int sender(char *ip, int port) {
     crsf_channels_t default_channels = CRSF_CHANNELS_DEFAULT;
     crsf_channels_t channels;
 
-    printf("UDP-sender. up to 5 ints 0-2047 (stop with Ctrl+C):\n");
+    printf("UDP-sender. up to 5 ints 0-2047 (stop with Ctrl+D):\n");
 
     char line[128];
     while (fgets(line, sizeof(line), stdin) != NULL) {
